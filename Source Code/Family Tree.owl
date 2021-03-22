@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/nithin/ontologies/2021/2/untitled-ontology-8"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/nithin/ontologies/2021/2/untitled-ontology-8">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Aunt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cousins"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Daughter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Family"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Father"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrandParents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mother"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Son"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Uncle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGender"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSibling"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wouldOffer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#FullName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Offer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Predictability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Safety"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Structure"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Aunt"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cousins"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Daughter"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Father"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrandParents"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mother"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parent"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Son"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Uncle"/>
+        <Class IRI="#Family"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Family"/>
+        <Class IRI="#Gender"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <ObjectMinCardinality cardinality="3">
+            <ObjectProperty IRI="#wouldOffer"/>
+            <Class IRI="#Family"/>
+        </ObjectMinCardinality>
+        <NamedIndividual IRI="#Predictability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectMinCardinality cardinality="3">
+            <ObjectProperty IRI="#wouldOffer"/>
+            <Class IRI="#Family"/>
+        </ObjectMinCardinality>
+        <NamedIndividual IRI="#Safety"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectMinCardinality cardinality="3">
+            <ObjectProperty IRI="#wouldOffer"/>
+            <Class IRI="#Family"/>
+        </ObjectMinCardinality>
+        <NamedIndividual IRI="#Structure"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wouldOffer"/>
+        <NamedIndividual IRI="#Offer"/>
+        <NamedIndividual IRI="#Safety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wouldOffer"/>
+        <NamedIndividual IRI="#Offer"/>
+        <NamedIndividual IRI="#Structure"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasGender"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasSibling"/>
+    </SymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasSibling"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#Family"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#Gender"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#FullName"/>
+        <Class IRI="#Family"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#FullName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
